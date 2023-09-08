@@ -1,4 +1,6 @@
-
+nav{ 
+    position: fixed;
+}
 main{
     display: flex;
     width: 100%;
@@ -17,11 +19,14 @@ main .back{
     width: 100%;
     height: 1000px;
     background-image: url("..//img/back.png");
-    
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
 main iframe{
+    position: relative;
+    top: 260px;
     width: 711px;
     height: 100pc;
     z-index: 1;
