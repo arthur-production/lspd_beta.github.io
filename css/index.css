@@ -113,7 +113,7 @@ header{
     }
 
 .qualification, .recrutement, .diversite, .carrières, .servir, .salaire {
-    width: 31vw;
+    width: 100%;
     height: 250px;
     border: 2px solid #075BB1;
     background-size: cover;
@@ -123,14 +123,51 @@ header{
 }
 
 #titre{
-    font-size: 35px;
+    font-size: 2.3vw;
     position: relative;
     top: 30%;
     text-shadow: 1px 2px 2px black;
 }
 #texte{
     position: relative;
-    top: 30%;
+    top: 23%;
     text-shadow: 1px 2px 2px black;
-    font-size: 20px;
+    font-size: 1.3vw;
+}
+.color{
+    color: white;
+    transition: color 30ms ease-in-out;
+}
+
+.color:hover{
+    color: #FF7300;
+}
+
+/************************************************/
+/* footer ( pied de la page ) */
+
+footer{
+    width: 100%;
+    height: 315px;
+    background-image: url("..//img/footer.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+/* tableau */
+table{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 65px;
+}
+tr{
+    text-align: center;
+}
+td{
+    padding: 20px;
+}
+td a{
+    color: #87D9FF;
+    text-decoration: none;
 }
