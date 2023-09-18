@@ -7,20 +7,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Corben&family=Fira+Sans&family=Inter+Tight:ital,wght@1,300&family=Rubik:ital@1&display=swap" rel="stylesheet">  
     <style>
-        table{
-            margin: auto;
-        }
-        tr{
-            text-align: center;
-        }
-        td{
-            padding: 20px;
-        }
     </style>
 </head>
 <body>
-    <form action="https://docs.google.com/spreadsheets/d/13B8iIxsbSIBGFZoIIRRomSyZUBHXvyA9719b6zNvXts/edit#gid=0">
-
+    <form method="post" action="/php/controller.php">
+        <label id="Nom">Nom : </label>
+        <input type="text" name="nom" id="Nom" placeholder="entrez votre Nom"/>
+        <label id="prenom">Prénom : </label>
+        <input type="text" name="prenom" id="prenom" placeholder="entrez votre Prénom" />
+        <label id="age">âge : </label>
+        <input type="number" name="age" id="age" placeholder="entrez votre âge"/>
+        <input type="submit" value="Submit" />
     </form>
 </body>
 </html>
