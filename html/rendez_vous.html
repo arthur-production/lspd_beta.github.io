@@ -12,16 +12,17 @@
     </head>
     <body>
         <nav> <!-- Barre de navigation  -->
-            <div class="logo"><a href="/html/index.html"><img src="../img/logo-nav.png" width="110px" alt="LOGO LSPD"></a></div>
+            <div class="logo"><a href="./index.html"><img src="../img/logo-nav.png" width="110px" alt="LOGO LSPD"></a></div>
             <ul>
                 <li><a class="links" href="#">GALERIE</a></li>
                 <li><a class="links" href="#">LSPD FAQ</a></li>
                 <li><a class="links" href="#">LSPD EVENTS</a></li>
                 <li><a class="links" href="#">RENDEZ-VOUS</a></li>   
             </ul>
-            <a class="link-button" href="/html/formulaire.html"><button>Postuler</button></a>
+            <a class="link-button" href="./formulaire.html"><button>Postuler</button></a>
         </nav>
-        <div class="container mt-auto">
+        <div class="main"></div>
+        <div class="container mt-5 form">
             <h1>Prise de rendez-vous</h1>
             <form onsubmit="sendContact(event)">
                 <div class="mb-3">
@@ -29,25 +30,61 @@
                   <input type="text" class="form-control" id="nameInput">
                 </div>
                 <div class="mb-3">
-                    <label for="dispoInput" class="form-label">vos disponibilités</label>
-                    <input type="date" class="form-control" id="dispoInput">
+                    <label for="dispoInputI" class="form-label">vos disponibilités</label>
+                    <input type="datetime-local" class="form-control" id="dispoInputI">
+                    <input type="datetime-local" class="form-control" id="dispoInputII">
+                    <input type="datetime-local" class="form-control" id="dispoInputIII">
                   </div>
                 <div class="mb-3">
-                  <label for="sujetpoInput" class="form-label">Sujet de la demande de prise d'un rendez-vous</label>
+                  <label for="sujetInput" class="form-label">Sujet de la demande de prise d'un rendez-vous</label>
                   <textarea class="form-control" id="sujetInput" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="pseudoInput" class="form-label">Pseudo et hashtag discord (pseudo#0000)</label>
+                    <input type="text" class="form-control" id="pseudoInput">
                 </div>
                 <button type="submit" class="btn btn-primary">envoyer</button>
             </form>
         </div>
+        <footer> <!-- pied de page avec les chose importante pour l'intéraction -->
+            <table>
+                <tr>
+                    <td rowspan="3"><img src="/img/logo.png" width="90px" alt="logo lspd"></td>
+                    <td><a href="">Accueil</a></td>
+                    <td><a href="">évènement</a></td>
+                </tr>
+                <tr>
+
+                    <td><a href="">calendrier recrutement</a></td>
+                    <td><a href="">Qualification</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="">Disclaimer</a></td>
+                    <td><a href="">LSPD</a></td>
+                    <!--<td><a href=""><img src="/img/insta.png" alt="instagram"></a></td>-->
+                    <td><a href="https://www.facebook.com/profile.php?id=100090385838472"><img src="/img/facebook.png" alt="Facebook"></a></td>
+                    <td><a href="https://www.youtube.com/channel/UCfVS81nWiukLosxmOosF8uQ"><img src="/img/youtube.png" alt="Youtube"></a></td>
+                    <!--<td><a href=""><img src="/img/twitter.png" alt="twitter" width="25px"></a></td>-->
+                    <td><a href="https://www.tiktok.com/@alexgrants24?lang=fr"><img src="/img/tiktok.png" alt="TikTok" width="57px"></a></td>
+                </tr>
+            </table>
+        </footer>
           <script>
             async function sendContact(ev) {
               ev.preventDefault();
               const sendername = document
                 .getElementById('nameInput').value;
-              const senderdispo = document
-                .getElementById('dispoInput').value;
+              const senderdispoI = document
+                .getElementById('dispoInputI').value;
+                const senderdispoII = document
+                    .getElementById('dispoInputII').value;
+                const senderdispoIII = document
+                    .getElementById('dispoInputIII').value;
                 const sendersujet = document
                 .getElementById('sujetInput').value;
+                const senderpseudo = document
+                    .getElementById('pseudoInput').value;
               const webhookBody = {
                 embeds: [{
                   title: 'Prise de rendez-vous',
@@ -56,12 +93,24 @@
                       value: sendername
                     },
                     {
-                      name: 'disponibilité(s)',
-                      value: senderdispo
+                      name: 'disponibilité(s) 1',
+                      value: senderdispoI
                     },
+                      {
+                          name: 'disponibilité(s) 2',
+                          value: senderdispoII
+                      },
+                      {
+                          name: 'disponibilité(s) 3',
+                          value: senderdispoIII
+                      },
                     {
                       name: 'sujet de la demande',
                       value: sendersujet
+                    },
+                    {
+                        name: 'pseudo discord',
+                        value: senderpseudo
                     }
                   ]
                 }],

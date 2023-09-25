@@ -14,7 +14,7 @@ header{
     justify-content: center;
     margin-left: 16em;
     padding-top: 6%;
-    text-shadow: -1px 2px 0px black;
+    text-shadow: -1px 2px 0 black;
 }
 .header-text p{
     font-size: 15px;

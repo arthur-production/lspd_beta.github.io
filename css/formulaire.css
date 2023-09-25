@@ -1,12 +1,16 @@
-nav{ 
+nav{
     position: fixed;
+    font-family: 'Poppins', sans-serif;
     top: 0;
 }
 form{
     margin-top: 200px;
 }
 
-button{
+form button{
     top: 10px;
     left: 10px;
+}
+.mt-5{
+    margin-bottom: 11em;
 }
