@@ -25,50 +25,44 @@
         </nav>
         <div class="container mt-5">
         <form onsubmit="sendContact(event)">
+            <h1>Recrutement Test</h1>
+            <h3>Merci de répondre honnêtement à ce questionnaire</h3>
             <div class="mb-3">
-              <label for="nameInput" class="form-label">Nom complet</label>
+                <label for="pseudoInput" class="form-label">(HRP) Votre Discord</label>
+                <input type="text" class="form-control" id="pseudoInput" placeholder="EX: AsaultModas#2081">
+            </div>
+            <div class="mb-3">
+              <label for="nameInput" class="form-label">Votre prénom et nom :</label>
               <input type="text" class="form-control" id="nameInput">
             </div>
             <div class="mb-3">
-                <label for="surnameInput" class="form-label">Prénom complet (ajoutez si plusieurs)</label>
-                <input type="text" class="form-control" id="surnameInput">
-              </div>
-              <div class="mb-3">
-                <label for="civiliteInput" class="form-label">Civilité (Homme, Femme ou Non-binaire)</label>
-                <input type="text" class="form-control" id="civiliteInput">
-              </div>
-              <div class="mb-3">
-                <label for="ageInput" class="form-label">Votre Âge</label>
-                <input type="number" class="form-control" id="ageInput">
-              </div>
-              <div class="mb-3">
-                <label for="natInput" class="form-label">Nationalité</label>
+                <label for="ageInput" class="form-label">Votre date de naissance</label>
+                <input type="date" class="form-control" id="ageInput">
+            </div>
+            <div class="mb-3">
+                <label for="natInput" class="form-label">Votre Nationalité</label>
                 <input type="text" class="form-control" id="natInput">
+            </div>
+            <div class="mb-3">
+                <label for="docInput" class="form-label">Les document que vous possédez</label>
+                <input type="text" class="form-control" id="docInput" placeholder="Permis de conduire, Permis de port d'arme">
               </div>
               <!------------------------------------------------------------------------------------------>
             <div class="mb-3">
-              <label for="profInput" class="form-label">Parlez-nous du cursus professionnel de votre personnage, des diplômes obtenus... (essayez de structurer votre texte)</label>
-              <textarea class="form-control" id="profInput" rows="3"></textarea>
+              <label for="dispoInput" class="form-label">Si vous étiez accepté au LSPD, quelle seraient vos disponibilités pour patrouiller entre 21h15 et 23h15 ?</label>
+              <textarea class="form-control" id="dispoInput" rows="3" placeholder="Mercredi, Jeudi, Vendredi, Samedi"></textarea>
             </div>
             <div class="mb-3">
-                <label for="motivationInput" class="form-label">Développez ici, vos motivations les plus sincères pour entrer au LSPD. (Réponses structurées attendues !)</label>
-                <textarea class="form-control" id="motivationInput" rows="3"></textarea>
+                <label for="qualInput" class="form-label">Citez 3 qualités et 3 défauts que vous avez.</label>
+                <textarea class="form-control" id="qualInput" rows="3"></textarea>
               </div>
               <div class="mb-3">
-                <label for="convaInput" class="form-label">Convainquez nous de vous sélectionner vous, plutôt qu'un autre. (Développez vos réponses !)</label>
-                <textarea class="form-control" id="convaInput" rows="3"></textarea>
+                <label for="lienInput" class="form-label">Le lien de votre lettre de motivation (présentation correcte exigée)</label>
+                <textarea class="form-control" id="lienInput" rows="3" placeholder="https://docs.google.com/document/d/1A-VvjL1A7ctw2lA0PO0pzsLJFTbMb3rNWZruXdrSJwk/edit?usp=sharing"></textarea>
               </div>
               <div class="mb-3">
-                <label for="serverInput" class="form-label">Grâce à quel moyen, avez vous pris connaissance de l’existence du serveur NSE ? (Par qui/quoi ?)</label>
-                <textarea class="form-control" id="serverInput" rows="3"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="pseudoInput" class="form-label">Pseudo et hashtag discord (pseudo#0000)</label>
-                <input type="text" class="form-control" id="pseudoInput">
-              </div>
-              <div class="mb-3">
-                <label for="attesteInput" class="form-label">J'atteste être un candidat motivé, rigoureux, discipliné et disponible régulièrement. (Oui, je l'atteste ou non, je n'atteste pas ces faits)</label>
-                <input type="text" class="form-control" id="attesteInput">
+                <label for="cvInput" class="form-label">Votre curriculum vitae (CV)</label>
+                  <input type="text" class="form-control" id="cvInput" placeholder="https://docs.google.com/document/d/1A-VvjL1A7ctw2lA0PO0pzsLJFTbMb3rNWZruXdrSJwk/edit?usp=sharing">
               </div>
              <!------------------------------------------------------------------------------------------>
                 <button type="submit" class="btn btn-primary">Envoyer votre formualaire</button>
@@ -103,45 +97,37 @@
           <script>
             async function sendContact(ev) {
               ev.preventDefault();
-              const sendername = document
+              const senderpseudo = document
+                .getElementById('pseudoInput').value;
+                const sendername = document
                 .getElementById('nameInput').value;
-              const senderprenom = document
-                .getElementById('surnameInput').value;
-                const sendercivilite = document
-                .getElementById('civiliteInput').value;
                 const senderage = document
                 .getElementById('ageInput').value;
                 const sendernat = document
                 .getElementById('natInput').value;
-                const senderprof = document
-                .getElementById('profInput').value;
-                const sendermotiv = document
-                .getElementById('motivationInput').value;
-                const senderconv = document
-                .getElementById('convaInput').value;
-                const senderserver = document
-                .getElementById('serverInput').value;
-                const senderpseudo = document
-                .getElementById('pseudoInput').value;
-                const senderatteste = document
-                .getElementById('attesteInput').value;
+                const senderdoc = document
+                .getElementById('docInput').value;
+                const senderdispo = document
+                .getElementById('dispoInput').value;
+                const senderqual = document
+                .getElementById('qualInput').value;
+                const senderlien = document
+                .getElementById('lienInput').value;
+                const sendercv = document
+                .getElementById('cvInput').value;
                 const webhookBody = {
             embeds: [{
-                title: 'Formulaire de recrutement',
+                title: 'Nouvelle Candidature LSPD',
                 fields: [{
-                    name: 'Nom',
+                    name: 'utilisateur discord',
+                    value: senderpseudo
+                  },
+                  {
+                    name: 'Prénom et Nom',
                     value: sendername
                   },
                   {
-                    name: 'prénom',
-                    value: senderprenom
-                  },
-                  {
-                    name: 'Civilité',
-                    value: sendercivilite
-                  },
-                  {
-                    name: 'Âge',
+                    name: 'Date de naissance',
                     value: senderage
                   },
                   {
@@ -149,28 +135,24 @@
                     value: sendernat
                   },
                   {
-                    name: 'Cursus professionnel',
-                    value: senderprof
+                    name: 'Les documents en ça possession',
+                    value: senderdoc
                   },
                   {
-                    name: 'Motivation',
-                    value: sendermotiv
+                    name: 'les Disponibilités',
+                    value: senderdispo
                   },
                   {
-                    name: 'Convainquez nous',
-                    value: senderconv
+                    name: 'Qualiter et défaut',
+                    value: senderqual
                   },
                   {
-                    name: 'Moyen pour avoir trouver le serveur',
-                    value: senderserver
+                    name: 'Lien de la lettre de motivation',
+                    value: senderlien
                   },
                   {
-                    name: 'Pseudo discord',
-                    value: senderpseudo
-                  },
-                  {
-                    name: 'Attestation de la canditature',
-                    value: senderatteste
+                    name: 'Lien du cv',
+                    value: sendercv
                   }
                 ]
               }],
