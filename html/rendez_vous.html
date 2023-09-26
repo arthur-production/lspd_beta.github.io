@@ -1,181 +1,121 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Formulaire</title>
+        <title>Rendez-vous</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <link rel="stylesheet" href="../css/formulaire.css">
+        <link rel="stylesheet" href="../css/rendez_vous.css">
         <link rel="stylesheet" href="../css/central.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https : //fonts.googleapis.com/css2?family= Poppins :wght@500 & display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Corben&family=Fira+Sans&family=Inter+Tight:ital,wght@1,300&family=Rubik:ital@1&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
     </head>
     <body>
-        <nav>
+        <nav> <!-- Barre de navigation  -->
             <div class="logo"><a href="./index.html"><img src="../img/logo-nav.png" width="110px" alt="LOGO LSPD"></a></div>
             <ul>
-                <li><a href="#">Galerie</a></li>
-                <li><a href="#">LSPD FAQ</a></li>
-                <li><a href="#">LSPD Events</a></li>
-                <li><a href="./rendez_vous.html">Rendez-vous</a></li>
+                <li><a class="links" href="#">GALERIE</a></li>
+                <li><a class="links" href="#">LSPD FAQ</a></li>
+                <li><a class="links" href="#">LSPD EVENTS</a></li>
+                <li><a class="links" href="#">RENDEZ-VOUS</a></li>   
             </ul>
             <a class="link-button" href="./formulaire.html"><button>Postuler</button></a>
         </nav>
-        <div class="container mt-5">
-        <form onsubmit="sendContact(event)">
-            <div class="mb-3">
-              <label for="nameInput" class="form-label">Nom complet</label>
-              <input type="text" class="form-control" id="nameInput">
-            </div>
-            <div class="mb-3">
-                <label for="surnameInput" class="form-label">Prénom complet (ajoutez si plusieurs)</label>
-                <input type="text" class="form-control" id="surnameInput">
-              </div>
-              <div class="mb-3">
-                <label for="civiliteInput" class="form-label">Civilité (Homme, Femme ou Non-binaire)</label>
-                <input type="text" class="form-control" id="civiliteInput">
-              </div>
-              <div class="mb-3">
-                <label for="ageInput" class="form-label">Votre Âge</label>
-                <input type="number" class="form-control" id="ageInput">
-              </div>
-              <div class="mb-3">
-                <label for="natInput" class="form-label">Nationalité</label>
-                <input type="text" class="form-control" id="natInput">
-              </div>
-              <!------------------------------------------------------------------------------------------>
-            <div class="mb-3">
-              <label for="profInput" class="form-label">Parlez-nous du cursus professionnel de votre personnage, des diplômes obtenus... (essayez de structurer votre texte)</label>
-              <textarea class="form-control" id="profInput" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="motivationInput" class="form-label">Développez ici, vos motivations les plus sincères pour entrer au LSPD. (Réponses structurées attendues !)</label>
-                <textarea class="form-control" id="motivationInput" rows="3"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="convaInput" class="form-label">Convainquez nous de vous sélectionner vous, plutôt qu'un autre. (Développez vos réponses !)</label>
-                <textarea class="form-control" id="convaInput" rows="3"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="serverInput" class="form-label">Grâce à quel moyen, avez vous pris connaissance de l’existence du serveur NSE ? (Par qui/quoi ?)</label>
-                <textarea class="form-control" id="serverInput" rows="3"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="pseudoInput" class="form-label">Pseudo et hashtag discord (pseudo#0000)</label>
-                <input type="text" class="form-control" id="pseudoInput">
-              </div>
-              <div class="mb-3">
-                <label for="attesteInput" class="form-label">J'atteste être un candidat motivé, rigoureux, discipliné et disponible régulièrement. (Oui, je l'atteste ou non, je n'atteste pas ces faits)</label>
-                <input type="text" class="form-control" id="attesteInput">
-              </div>
-             <!------------------------------------------------------------------------------------------>
-                <button type="submit" class="btn btn-primary">Envoyer votre formualaire</button>
-          </form>
+        <div class="main"></div>
+        <div class="container mt-5 form">
+            <h1>Prise de rendez-vous</h1>
+            <form onsubmit="sendContact(event)">
+                <div class="mb-3">
+                  <label for="nameInput" class="form-label">Nom et Prénom</label>
+                  <input type="text" class="form-control" id="nameInput">
+                </div>
+                <div class="mb-3">
+                    <label for="dispoInputI" class="form-label">vos disponibilités</label>
+                    <input type="datetime-local" class="form-control" id="dispoInputI">
+                    <input type="datetime-local" class="form-control" id="dispoInputII">
+                    <input type="datetime-local" class="form-control" id="dispoInputIII">
+                  </div>
+                <div class="mb-3">
+                  <label for="sujetInput" class="form-label">Sujet de la demande de prise d'un rendez-vous</label>
+                  <textarea class="form-control" id="sujetInput" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="pseudoInput" class="form-label">Pseudo et hashtag discord (pseudo#0000)</label>
+                    <input type="text" class="form-control" id="pseudoInput">
+                </div>
+                <button type="submit" class="btn btn-primary">envoyer</button>
+            </form>
         </div>
-            <footer> <!-- pied de page avec les choses importantes pour l’intéraction -->
-                <table>
-                    <tr>
-                        <td rowspan="3"><img src="/img/logo.png" width="90px" alt="logo lspd"></td>
-                        <td><a href="">Accueil</a></td>
-                        <td><a href="">évènement</a></td>
-                    </tr>
-                    <tr>
+        <footer> <!-- pied de page avec les choses importantes pour l’intéraction -->
+            <table>
+                <tr>
+                    <td rowspan="3"><img src="/img/logo.png" width="90px" alt="logo lspd"></td>
+                    <td><a href="">Accueil</a></td>
+                    <td><a href="">évènement</a></td>
+                </tr>
+                <tr>
 
-                        <td><a href="">calendrier recrutement</a></td>
-                        <td><a href="">Qualification</a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><a href="">Disclaimer</a></td>
-                        <td><a href="">LSPD</a></td>
-                        <!--<td><a href=""><img src="/img/insta.png" alt="instagram"></a></td>-->
-                        <td><a href="https://www.facebook.com/profile.php?id=100090385838472"><img src="/img/facebook.png" alt="Facebook"></a></td>
-                        <td><a href="https://www.youtube.com/channel/UCfVS81nWiukLosxmOosF8uQ"><img src="/img/youtube.png" alt="Youtube"></a></td>
-                        <!--<td><a href=""><img src="/img/twitter.png" alt="twitter" width="25px"></a></td>-->
-                        <td><a href="https://www.tiktok.com/@alexgrants24?lang=fr"><img src="/img/tiktok.png" alt="TikTok" width="57px"></a></td>
-                    </tr>
-                </table>
-            </footer>
-
-          <!--------------------------------------------------------------------->
+                    <td><a href="">calendrier recrutement</a></td>
+                    <td><a href="">Qualification</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="">Disclaimer</a></td>
+                    <td><a href="">LSPD</a></td>
+                    <!--<td><a href=""><img src="/img/insta.png" alt="instagram"></a></td>-->
+                    <td><a href="https://www.facebook.com/profile.php?id=100090385838472"><img src="/img/facebook.png" alt="Facebook"></a></td>
+                    <td><a href="https://www.youtube.com/channel/UCfVS81nWiukLosxmOosF8uQ"><img src="/img/youtube.png" alt="Youtube"></a></td>
+                    <!--<td><a href=""><img src="/img/twitter.png" alt="twitter" width="25px"></a></td>-->
+                    <td><a href="https://www.tiktok.com/@alexgrants24?lang=fr"><img src="/img/tiktok.png" alt="TikTok" width="57px"></a></td>
+                </tr>
+            </table>
+        </footer>
           <script>
             async function sendContact(ev) {
               ev.preventDefault();
               const sendername = document
                 .getElementById('nameInput').value;
-              const senderprenom = document
-                .getElementById('surnameInput').value;
-                const sendercivilite = document
-                .getElementById('civiliteInput').value;
-                const senderage = document
-                .getElementById('ageInput').value;
-                const sendernat = document
-                .getElementById('natInput').value;
-                const senderprof = document
-                .getElementById('profInput').value;
-                const sendermotiv = document
-                .getElementById('motivationInput').value;
-                const senderconv = document
-                .getElementById('convaInput').value;
-                const senderserver = document
-                .getElementById('serverInput').value;
+              const senderdispoI = document
+                .getElementById('dispoInputI').value;
+                const senderdispoII = document
+                    .getElementById('dispoInputII').value;
+                const senderdispoIII = document
+                    .getElementById('dispoInputIII').value;
+                const sendersujet = document
+                .getElementById('sujetInput').value;
                 const senderpseudo = document
-                .getElementById('pseudoInput').value;
-                const senderatteste = document
-                .getElementById('attesteInput').value;
-                const webhookBody = {
-            embeds: [{
-                title: 'Formulaire de recrutement',
-                fields: [{
-                    name: 'Nom',
-                    value: sendername
-                  },
-                  {
-                    name: 'prénom',
-                    value: senderprenom
-                  },
-                  {
-                    name: 'Civilité',
-                    value: sendercivilite
-                  },
-                  {
-                    name: 'Âge',
-                    value: senderage
-                  },
-                  {
-                    name: 'Nationalité',
-                    value: sendernat
-                  },
-                  {
-                    name: 'Cursus professionnel',
-                    value: senderprof
-                  },
-                  {
-                    name: 'Motivation',
-                    value: sendermotiv
-                  },
-                  {
-                    name: 'Convainquez nous',
-                    value: senderconv
-                  },
-                  {
-                    name: 'Moyen pour avoir trouver le serveur',
-                    value: senderserver
-                  },
-                  {
-                    name: 'Pseudo discord',
-                    value: senderpseudo
-                  },
-                  {
-                    name: 'Attestation de la canditature',
-                    value: senderatteste
-                  }
-                ]
-              }],
-            };
-              const webhookUrl = 'https://discord.com/api/webhooks/1152692335512141954/HX5A1y9vqkDnINfpRZ6MdwUKDuKFTSMOUB2uZHnUpBK4tj96ORyDera6FKmdrjGSQb5Y';
+                    .getElementById('pseudoInput').value;
+              const webhookBody = {
+                embeds: [{
+                  title: 'Prise de rendez-vous',
+                  fields: [{
+                      name: 'Nom et prénom',
+                      value: sendername
+                    },
+                    {
+                      name: 'disponibilité(s) 1',
+                      value: senderdispoI
+                    },
+                      {
+                          name: 'disponibilité(s) 2',
+                          value: senderdispoII
+                      },
+                      {
+                          name: 'disponibilité(s) 3',
+                          value: senderdispoIII
+                      },
+                    {
+                      name: 'sujet de la demande',
+                      value: sendersujet
+                    },
+                    {
+                        name: 'pseudo discord',
+                        value: senderpseudo
+                    }
+                  ]
+                }],
+              };
+              const webhookUrl = 'https://discord.com/api/webhooks/1155931411140849704/7Ho172871rGmn4X4jgjloE4T1kDzHclKqZMJamVxDPxriZpdRY7U7Cqc4j1WMvN5wYKr';
               const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
@@ -184,49 +124,11 @@
                 body: JSON.stringify(webhookBody),
               });
               if (response.ok) {
-                alert('Nous avons bien reçu votre message !');
+                alert('Votre demande de rendez-vous à bien été pris en compte!');
               } else {
-                alert('Il y avait une erreur! Réessayez plus tard!');
+                alert('Il y a une erreur ! veuillez réessayer plus tard !');
               }
             }
           </script>
-        <!-- Code injected by live-server -->
-        <script>
-            // <![CDATA[  <-- For SVG support
-            if ('WebSocket' in window) {
-                (function () {
-                    function refreshCSS() {
-                        var sheets = [].slice.call(document.getElementsByTagName("link"));
-                        var head = document.getElementsByTagName("head")[0];
-                        for (var i = 0; i < sheets.length; ++i) {
-                            var elem = sheets[i];
-                            var parent = elem.parentElement || head;
-                            parent.removeChild(elem);
-                            var rel = elem.rel;
-                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                            }
-                            parent.appendChild(elem);
-                        }
-                    }
-                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                    var address = protocol + window.location.host + window.location.pathname + '/ws';
-                    var socket = new WebSocket(address);
-                    socket.onmessage = function (msg) {
-                        if (msg.data == 'reload') window.location.reload();
-                        else if (msg.data == 'refreshcss') refreshCSS();
-                    };
-                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                        console.log('Live reload enabled.');
-                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                    }
-                })();
-            }
-            else {
-                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-            }
-            // ]]>
-        </script>
     </body>
 </html>
