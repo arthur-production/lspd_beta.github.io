@@ -100,7 +100,7 @@ header{
     }
     .carrières { 
         grid-area: 2 / 3 / 3 / 4;
-        background-image: url("..//img/Carrière.png");
+        background-image: url("..//img/Carriere.png");
     }
     .servir { 
         grid-area: 2 / 2 / 3 / 3;
