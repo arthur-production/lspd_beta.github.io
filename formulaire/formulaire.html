@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Formulaire</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="../css/formulaire.css">
+    <link rel="stylesheet" href="../css/central.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https : //fonts.googleapis.com/css2?family= Poppins :wght@500 & display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Corben&family=Fira+Sans&family=Inter+Tight:ital,wght@1,300&family=Rubik:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: #0f2940!important;
+            color: cornsilk!important;
+        }
+
+        nav{
+            position: fixed;
+            font-family: 'Poppins', sans-serif;
+            top: 0;
+        }
+        form{
+            margin-top: 200px;
+        }
+        form label{
+            text-align: center;
+            display: block;
+        }
+        form button{
+            top: 10px;
+            left: 10px;
+        }
+        .mt-5{
+            margin-bottom: 11em;
+        }
+        h1, h3{
+            display: block;
+            text-align: center;
+        }
+        h3{
+            margin-bottom: 60px!important;
+        }
+        *, *::after,*::before{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        /***********************/
+        /* navbar */
+        nav{
+            display: flex;
+            margin: auto;
+            align-items: center;
+            z-index: 2;
+            background: #012B6D;
+            box-shadow: 0 10px 32px -6px bisque;
+            width: 100%;
+            height: 100px;
+            padding: 7px;
+        }
+        .logo{
+            position: relative;
+            left: 135px;
+        }
+        .nav-links{
+            display: block;
+            margin: auto;
+            opacity: 1;
+        }
+        nav ul{
+            display: inline-flex;
+            list-style-type: none;
+            gap: 30px;
+            margin: auto;
+        }
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .links{
+            color: var(--White, #FFF);
+        }
+        .links:hover{
+            color: #ff7f17;
+        }
+
+        nav button{
+            display: flex;
+            position: relative;
+            font-size: 16px;
+            width: 241px;
+            height: 50px;
+            padding: 12px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            right: 20%;
+            border-radius: 6px;
+            background: #FF7300;
+            color: #FFF;
+        }
+
+        .link-button{
+            color: white;
+            text-decoration: none;
+        }
+
+        button:active{
+            background: #e4751a;
+        }
+        .dropdown{
+            display: none;
+        }
+        /* Media query pour les écrans plus petits (par exemple, les écrans de largeur maximale de 768px) */
+        @media screen and (max-width: 1160px) {
+            nav{
+                display: none;
+            }
+
+            .dropbtn {
+                background-color: transparent;
+                position: absolute;
+                padding: 12px 0px 0px 12px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                display: block;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            /*Logo unitÃ©*/
+            .topright{
+                position: absolute;
+                top: 14px;
+                right: 22px;
+            }
+
+            /* animation */
+            /* Titre */
+
+            h1{
+                color: #020202;
+                margin: 0;
+                font-size: 50px;
+                opacity: 100%;
+                text-shadow: 2px 2px 2px black;
+                text-align: center;
+                text-transform: uppercase;
+                animation: opa 1s;
+                width: 100%;
+            }
+        }
+
+        footer{
+            width: 100%;
+            height: 315px;
+            background-image: url("..//img/footer.png");
+            background-size: cover;
+            background-position: center center;
+        }
+
+        /* tableau */
+        table{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 65px;
+        }
+        tr{
+            text-align: center;
+        }
+        td{
+            padding: 20px;
+        }
+        td a{
+            color: #87D9FF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo"><a href="#"><img src="../img/logo-nav.png" width="110px" alt="LOGO LSPD"></a></div>
+    <ul>
+        <li><a class="links" href="#">GALERIE</a></li>
+        <li><a class="links" href="#">LSPD FAQ</a></li>
+        <li><a class="links" href="#">LSPD EVENTS</a></li>
+        <li><a class="links" href="#">RENDEZ-VOUS</a></li>
+    </ul>
+    <a class="link-button" href="#"><button>Postuler</button></a>
+</nav>
+<div class="container mt-5">
+    <form onsubmit="sendContact(event)">
+        <h1>Recrutement Test</h1>
+        <h3>Merci de répondre honnêtement à ce questionnaire</h3>
+        <div class="mb-3">
+            <label for="pseudoInput" class="form-label">(HRP) Votre Discord</label>
+            <input type="text" class="form-control" id="pseudoInput" placeholder="EX: AsaultModas#2081">
+        </div>
+        <div class="mb-3">
+            <label for="nameInput" class="form-label">Votre prénom et nom :</label>
+            <input type="text" class="form-control" id="nameInput">
+        </div>
+        <div class="mb-3">
+            <label for="ageInput" class="form-label">Votre date de naissance</label>
+            <input type="date" class="form-control" id="ageInput">
+        </div>
+        <div class="mb-3">
+            <label for="natInput" class="form-label">Votre Nationalité</label>
+            <input type="text" class="form-control" id="natInput">
+        </div>
+        <div class="mb-3">
+            <label for="docInput" class="form-label">Les documents que vous possédez</label>
+            <input type="text" class="form-control" id="docInput" placeholder="Permis de conduire, Permis de port d'arme">
+        </div>
+        <!------------------------------------------------------------------------------------------>
+        <div class="mb-3">
+            <label for="dispoInput" class="form-label">Si vous étiez accepté au LSPD, qu'elles seraient vos disponibilités pour patrouiller entre 21h15 et 23h15 ?</label>
+            <textarea class="form-control" id="dispoInput" rows="3" placeholder="Mercredi, Jeudi, Vendredi, Samedi"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="qualInput" class="form-label">Citez 3 qualités et 3 défauts que vous avez.</label>
+            <textarea class="form-control" id="qualInput" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="lienInput" class="form-label">Le lien de votre lettre de motivation (présentation correcte exigée)</label>
+            <textarea class="form-control" id="lienInput" rows="3" placeholder="https://docs.google.com/document/d/1A-VvjL1A7ctw2lA0PO0pzsLJFTbMb3rNWZruXdrSJwk/edit?usp=sharing"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="cvInput" class="form-label">Votre curriculum vitae (CV)</label>
+            <input type="text" class="form-control" id="cvInput" placeholder="https://docs.google.com/document/d/1A-VvjL1A7ctw2lA0PO0pzsLJFTbMb3rNWZruXdrSJwk/edit?usp=sharing">
+        </div>
+        <!------------------------------------------------------------------------------------------>
+        <button type="submit" class="btn btn-primary">Envoyer votre formulaire</button>
+    </form>
+</div>
+<footer> <!-- pied de page avec les choses importantes pour l’intéraction -->
+    <table>
+        <tr>
+            <td rowspan="3"><img src="../img/logo.png" width="90px" alt="logo lspd"></td>
+            <td><a href="#">Accueil</a></td>
+            <td><a href="#">évènement</a></td>
+        </tr>
+        <tr>
+
+            <td><a href="#">calendrier recrutement</a></td>
+            <td><a href="#">Qualification</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="#">Disclaimer</a></td>
+            <td><a href="#">LSPD</a></td>
+            <!--<td><a href=""><img src="/img/insta.png" alt="instagram"></a></td>-->
+            <td><a href="#"><img src="/img/facebook.png" alt="Facebook"></a></td>
+            <td><a href="#"><img src="/img/youtube.png" alt="Youtube"></a></td>
+            <!--<td><a href=""><img src="/img/twitter.png" alt="twitter" width="25px"></a></td>-->
+            <td><a href="#"><img src="/img/tiktok.png" alt="TikTok" width="57px"></a></td>
+        </tr>
+    </table>
+</footer>
+
+<!--------------------------------------------------------------------->
+<script>
+    async function sendContact(ev) {
+        ev.preventDefault();
+        const senderpseudo = document
+            .getElementById('pseudoInput').value;
+        const sendername = document
+            .getElementById('nameInput').value;
+        const senderage = document
+            .getElementById('ageInput').value;
+        const sendernat = document
+            .getElementById('natInput').value;
+        const senderdoc = document
+            .getElementById('docInput').value;
+        const senderdispo = document
+            .getElementById('dispoInput').value;
+        const senderqual = document
+            .getElementById('qualInput').value;
+        const senderlien = document
+            .getElementById('lienInput').value;
+        const sendercv = document
+            .getElementById('cvInput').value;
+        const webhookBody = {
+            embeds: [{
+                title: 'Nouvelle Candidature LSPD',
+                fields: [{
+                    name: 'utilisateur discord',
+                    value: senderpseudo
+                },
+                    {
+                        name: 'Prénom et Nom',
+                        value: sendername
+                    },
+                    {
+                        name: 'Date de naissance',
+                        value: senderage
+                    },
+                    {
+                        name: 'Nationalité',
+                        value: sendernat
+                    },
+                    {
+                        name: 'Les documents en ça possession',
+                        value: senderdoc
+                    },
+                    {
+                        name: 'les Disponibilités',
+                        value: senderdispo
+                    },
+                    {
+                        name: 'Qualiter et défaut',
+                        value: senderqual
+                    },
+                    {
+                        name: 'Lien de la lettre de motivation',
+                        value: senderlien
+                    },
+                    {
+                        name: 'Lien du cv',
+                        value: sendercv
+                    }
+                ]
+            }],
+        };
+        const webhookUrl = 'https://discord.com/api/webhooks/1152692335512141954/HX5A1y9vqkDnINfpRZ6MdwUKDuKFTSMOUB2uZHnUpBK4tj96ORyDera6FKmdrjGSQb5Y';
+        const response = await fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(webhookBody),
+        });
+        if (response.ok) {
+            alert('Nous avons bien reçu votre message !');
+        } else {
+            alert('Il y avait une erreur! Réessayez plus tard!');
+        }
+    }
+</script>
+<!-- Code injected by live-server -->
+<script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+        (function () {
+            function refreshCSS() {
+                var sheets = [].slice.call(document.getElementsByTagName("link"));
+                var head = document.getElementsByTagName("head")[0];
+                for (var i = 0; i < sheets.length; ++i) {
+                    var elem = sheets[i];
+                    var parent = elem.parentElement || head;
+                    parent.removeChild(elem);
+                    var rel = elem.rel;
+                    if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                        var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                        elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                    }
+                    parent.appendChild(elem);
+                }
+            }
+            var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+            var address = protocol + window.location.host + window.location.pathname + '/ws';
+            var socket = new WebSocket(address);
+            socket.onmessage = function (msg) {
+                if (msg.data == 'reload') window.location.reload();
+                else if (msg.data == 'refreshcss') refreshCSS();
+            };
+            if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                console.log('Live reload enabled.');
+                sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+            }
+        })();
+    }
+    else {
+        console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+</script>
+</body>
+</html>
