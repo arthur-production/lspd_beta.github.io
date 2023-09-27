@@ -5,18 +5,41 @@
     <link rel="stylesheet" href="../css/central.css">
     <title>galerie</title>
     <style>
-        h1, h3{
-            text-align: center;
+        body{
+            background-color: #0f2940;
         }
-        h1{
-            font-size: 100px;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
-        h3{
-            font-size: 80px;
+
+        .image {
+            position: relative;
+            margin: 60px;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
         }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+
+        }
+        .img{
+            opacity: 0.5;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image:hover .img{
+            opacity: 1;
+        }
+
     </style>
 </head>
-<body>
+    <body>
     <nav> <!-- Barre de navigation  -->
         <div class="logo"><a href="./index.html"><img src="../img/logo-nav.png" width="110px" alt="LOGO LSPD"></a></div>
         <ul>
@@ -27,8 +50,59 @@
         </ul>
         <a class="link-button" href="./formulaire.html"><button>Postuler</button></a>
     </nav>
-    <h1>En cours de développement</h1>
-    <h3>équipe du dev</h3>
-</body>
+    <div class="gallery">
+        <div class="image">
+            <img class="img" src="../img/accueil.png" alt="Image 1">
+        </div>
+        <div class="image">
+            <img class="img"  src="../img/Carrière.png" alt="Image 2">
+        </div>
+        <div class="image">
+            <img class="img" src="../img/proteger.png" alt="Image 3">
+        </div>
+        <div class="image">
+            <img class="img" src="../img/recrutement.png" alt="Image 3">
+        </div>
+        <div class="image">
+            <img class="img" src="../img/Qualifications.png" alt="Image 3">
+        </div>
+        <div class="image">
+            <img class="img" src="../img/lspd.jpg" alt="Image 3">
+        </div>
+        <div class="image">
+            <img class="img" src="../img/image.png" alt="Image 3">
+        </div>
+        <div class="image">
+            <img class="img" src="../img/Salaire.png" alt="Image 3" width="10000">
+        </div>
+        <div class="image">
+            <img class="img" src="../img/footer.png" alt="Image 3">
+        </div>
+    </div>
+    <footer> <!-- pied de page avec les choses importante pour l’intéraction -->
+        <table>
+            <tr>
+                <td rowspan="3"><img src="../img/logo.png" width="90px" alt="logo lspd"></td>
+                <td><a href="./index.html">Accueil</a></td>
+                <td><a href="./events.html">évènement</a></td>
+            </tr>
+            <tr>
+
+                <td><a href="">calendrier recrutement</a></td>
+                <td><a href="">Qualification</a></td>
+            </tr>
+            <tr>
+                <td><a href="./report.html" style="color: red" target="_blank">bug report site</a></td>
+                <td><a href="">Disclaimer</a></td>
+                <td><a href="">LSPD</a></td>
+                <!--<td><a href=""><img src="/img/insta.png" alt="instagram"></a></td>-->
+                <td><a href="https://www.facebook.com/profile.php?id=100090385838472" target="_blank"><img src="../img/facebook.png" alt="Facebook"></a></td>
+                <td><a href="https://www.youtube.com/channel/UCfVS81nWiukLosxmOosF8uQ" target="_blank"><img src="../img/youtube.png" alt="Youtube"></a></td>
+                <!--<td><a href=""><img src="/img/twitter.png" alt="twitter" width="25px"></a></td>-->
+                <td><a href="https://www.tiktok.com/@alexgrants24?lang=fr" target="_blank"><img src="../img/tiktok.png" alt="TikTok" width="57px"></a></td>
+            </tr>
+        </table>
+    </footer>
+    </body>
 </html>
 
