@@ -70,6 +70,75 @@ nav button{
 button:active{
     background: #e4751a;
 }
+.dropdown{
+    display: none;
+}
+/* Media query pour les écrans plus petits (par exemple, les écrans de largeur maximale de 768px) */
+@media screen and (max-width: 1160px) {
+    nav{
+        display: none;
+    }
+
+    .dropbtn {
+        background-color: transparent;
+        position: absolute;
+        padding: 12px 0px 0px 12px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        display: block;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /*Logo unitÃ©*/
+    .topright{
+        position: absolute;
+        top: 14px;
+        right: 22px;
+    }
+
+    /* animation */
+    /* Titre */
+
+    h1{
+        color: #020202;
+        margin: 0;
+        font-size: 50px;
+        opacity: 100%;
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
+        text-transform: uppercase;
+        animation: opa 1s;
+        width: 100%;
+    }
+}
+
 
 /*
 animation: 5s linear 0s normal forwards running move;
