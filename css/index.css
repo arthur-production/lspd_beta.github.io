@@ -115,6 +115,7 @@ header{
 .qualification, .recrutement, .diversite, .carrières, .servir, .salaire {
     width: 100%;
     height: 250px;
+    cursor: pointer;
     border: 2px solid #075BB1;
     background-size: cover;
     text-align: center;
